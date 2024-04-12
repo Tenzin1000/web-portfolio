@@ -1,0 +1,78 @@
+.body-container {
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+.profileimg {
+  height: 300px;
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.title-para {
+  margin: 5px auto;
+  text-align: center;
+}
+
+/* my work */
+/* .work-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+} */
+.work-img {
+  height: 180px;
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 560px) {
+  .profileimg {
+    height: 150px;
+    width: 150px;
+  }
+}
+.company-img {
+  padding: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===carousel==== */
+.quotes-color {
+  color: #cc1616;
+}
+.img-profile {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.carousel-quotes {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+}
+.carousel-quotes-r {
+  position: absolute;
+  font-size: 30px;
+}
+.cq-l {
+  top: -19px;
+  left: 0;
+}
+.cq-r {
+  bottom: -16px;
+  right: 0;
+}
+.carousel-inner {
+  padding: 23px !important;
+}
+/* ===skill=== */
+.sk-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

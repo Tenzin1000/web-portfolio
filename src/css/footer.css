@@ -1,0 +1,12 @@
+.fo-logo {
+  height: 90px;
+  object-fit: cover;
+}
+.socialicon {
+  margin-right: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+.hr {
+  width: 100%;
+}
