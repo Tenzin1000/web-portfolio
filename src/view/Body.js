@@ -102,7 +102,7 @@ export default function Body() {
         <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
       </div>
       {/* ======startup===== */}
-      <TextContainer
+      {/* <TextContainer
         name={names[2]}
         paragraph={paragraphs[2]}
         className="d-b text-center"
@@ -114,7 +114,7 @@ export default function Body() {
         <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
         <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
         <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
-      </div>
+      </div> */}
       {/* ====chat me===== */}
       <div className="row mx-auto  d-b align-items-center justify-content-center">
         <div className="msg-con p-4 col-9 ">
@@ -127,7 +127,14 @@ export default function Body() {
           <div className="msg-btn  rounded d-flex align-items-center justify-content-center">
             <button className=" bg-white px-3 text-dark btn d-flex align-items-center justify-content-center">
               <FontAwesomeIcon icon={faMessage} className="me-1" />
-              <h5 className="mb-0">text me</h5>
+              <h5 className="mb-0">
+                <a
+                  href="https://www.facebook.com/Erick.evon07"
+                  className="textme"
+                  target="_blank">
+                  text me
+                </a>
+              </h5>
             </button>
           </div>
         </div>
@@ -157,7 +164,7 @@ export default function Body() {
         <div className="carousel-inner">
           <div className="carousel-item active ">
             <div className="carousel-img">
-              <img src={img} alt="" className="img-profile" />
+              <img src={aiinterf} alt="" className="img-profile" />
             </div>
             <div className="carousel-quotes ">
               <FontAwesomeIcon
@@ -174,28 +181,52 @@ export default function Body() {
               />
             </div>
             <div className="carousel-ab">
-              <div className="carousel-name sub-grey">Sangey Lama</div>
-              <div className="carousel-subtitle fw-bold">
-                Manager at Ai interf
+              {/* <div className="carousel-name sub-grey">Sangey Lama</div> */}
+              <div className="carousel-subtitle fw-bold">Ai interf</div>
+            </div>
+          </div>
+          <div className="carousel-item  ">
+            <div className="carousel-img">
+              <img src={globaltech} alt="" className="img-profile" />
+            </div>
+            <div className="carousel-quotes ">
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                className="quotes-color carousel-quotes-r cq-l"
+              />
+              <div className="carouesl-main-quotes">
+                working with young youth, learning more
               </div>
+              <FontAwesomeIcon
+                icon={faQuoteRight}
+                className="quotes-color carousel-quotes-r cq-r "
+              />
+            </div>
+            <div className="carousel-ab">
+              {/* <div className="carousel-name sub-grey">Sangey Lama</div> */}
+              <div className="carousel-subtitle fw-bold">Ai interf</div>
             </div>
           </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
+          <div className="carousel-item  ">
+            <div className="carousel-img">
+              <img src={smartdoors} alt="" className="img-profile" />
             </div>
-          </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
+            <div className="carousel-quotes ">
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                className="quotes-color carousel-quotes-r cq-l"
+              />
+              <div className="carouesl-main-quotes">
+                Timely managed projects. Responsive designs.
+              </div>
+              <FontAwesomeIcon
+                icon={faQuoteRight}
+                className="quotes-color carousel-quotes-r cq-r "
+              />
+            </div>
+            <div className="carousel-ab">
+              {/* <div className="carousel-name sub-grey">Sangey Lama</div> */}
+              <div className="carousel-subtitle fw-bold">Ai interf</div>
             </div>
           </div>
         </div>

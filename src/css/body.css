@@ -13,7 +13,9 @@
   margin: 5px auto;
   text-align: center;
 }
-
+.textme {
+  text-decoration: none;
+}
 /* my work */
 /* .work-container {
   display: grid;
@@ -25,6 +27,24 @@
 .work-img {
   height: 180px;
   border: 1px solid red;
+}
+.work-img:nth-child(1) {
+  background: url("../img/website/naksa.png") center/cover no-repeat;
+}
+.work-img:nth-child(2) {
+  background: url("../img/website/smartdoors.png") center/cover no-repeat;
+}
+.work-img:nth-child(3) {
+  background: url("../img/website/treknepal.png") center/cover no-repeat;
+}
+.work-img:nth-child(4) {
+  background: url("../img/website/global.png") center/cover no-repeat;
+}
+.work-img:nth-child(5) {
+  background: url("../img/website/covid.png") center/cover no-repeat;
+}
+.work-img:nth-child(6) {
+  background: url("../img/website/coffee.png") center/cover no-repeat;
 }
 
 @media screen and (max-width: 560px) {
@@ -45,10 +65,8 @@
 }
 .img-profile {
   height: 200px;
-  width: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
+  width: 90%;
+  object-fit: contain;
 }
 .carousel-quotes {
   position: relative;
