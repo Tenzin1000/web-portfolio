@@ -61,6 +61,20 @@ export default function Body() {
     "Mainly used libraries, programming languages, and featured skills.",
     "Welcome to my portfolio! As a skilled web developer, I specialize in crafting responsive designs, building websites, and ensuring they align seamlessly with UI/UX principles. From concept to deployment, I'm committed to bringing your vision to life with precision and proficiency. Let's collaborate to transform your ideas into stunning digital experiences.",
   ];
+  const imageLinks = [
+    "https://naksagumba.org.np/",
+    "http://http://smartdoors.naksagumba.org.np/",
+    "https://tenzin1000.github.io/trek-nepal/",
+    "https://globaltech.com.np/",
+    "https://tenzin1000.github.io/covid-data.github.io/",
+    "https://tenzin1000.github.io/Site1/",
+  ];
+
+  const handleImageClick = index => {
+    const link = imageLinks[index];
+    window.open(link, "_blank");
+  };
+
   return (
     <div className="body-container dotted-border col-md-9 col-11 mx-auto ">
       <div className="photo-container d-b d-flex align-items-center justify-content-center">
@@ -94,12 +108,24 @@ export default function Body() {
       {/* ======mywork===== */}
       <TextContainer name={names[1]} paragraph={paragraphs[1]} />
       <div className="work-container d-t d-b p-5 row mx-0 align-items-center justify-content-center">
-        <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
-        <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
-        <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
-        <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
-        <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
-        <div className="work-img col-6 col-md-4 col-12 my-4 my-md-0"></div>
+        <div
+          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
+          onClick={() => handleImageClick(0)}></div>
+        <div
+          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
+          onClick={() => handleImageClick(1)}></div>
+        <div
+          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
+          onClick={() => handleImageClick(2)}></div>
+        <div
+          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
+          onClick={() => handleImageClick(3)}></div>
+        <div
+          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
+          onClick={() => handleImageClick(4)}></div>
+        <div
+          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
+          onClick={() => handleImageClick(5)}></div>
       </div>
       {/* ======startup===== */}
       {/* <TextContainer
@@ -204,7 +230,7 @@ export default function Body() {
             </div>
             <div className="carousel-ab">
               {/* <div className="carousel-name sub-grey">Sangey Lama</div> */}
-              <div className="carousel-subtitle fw-bold">Ai interf</div>
+              <div className="carousel-subtitle fw-bold">globaltech</div>
             </div>
           </div>
           <div className="carousel-item  ">
@@ -226,7 +252,7 @@ export default function Body() {
             </div>
             <div className="carousel-ab">
               {/* <div className="carousel-name sub-grey">Sangey Lama</div> */}
-              <div className="carousel-subtitle fw-bold">Ai interf</div>
+              <div className="carousel-subtitle fw-bold">smartdoors</div>
             </div>
           </div>
         </div>

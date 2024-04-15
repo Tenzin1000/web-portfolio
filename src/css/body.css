@@ -27,6 +27,7 @@
 .work-img {
   height: 180px;
   border: 1px solid red;
+  cursor: pointer;
 }
 .work-img:nth-child(1) {
   background: url("../img/website/naksa.png") center/cover no-repeat;

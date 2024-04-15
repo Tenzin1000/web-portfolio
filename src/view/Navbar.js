@@ -14,7 +14,11 @@ export default function Navbar() {
       </div>
       <div className="nav-call">
         <FontAwesomeIcon icon={faPhoneVolume} className="me-2" />
-        9861801177
+        <a
+          href="tel:9861801177"
+          class="btn-click-here text-white text-decoration-none">
+          9861801177
+        </a>
       </div>
     </div>
   );
