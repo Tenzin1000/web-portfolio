@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //img
 import img from "../img/profile.jpg";
 import globaltech from "../img/globaltech.png";
@@ -27,6 +27,14 @@ import {
   faQuoteLeft,
   faQuoteRight,
 } from "@fortawesome/free-solid-svg-icons";
+
+//images
+import naksaImg from "../img/website/naksa.png";
+import smartdoorsImg from "../img/website/smartdoors.png";
+import treknepalImg from "../img/website/treknepal.png";
+import globaltecImg from "../img/website/global.png";
+import covidImg from "../img/website/covid.png";
+import coffeeImg from "../img/website/coffee.png";
 export default function Body() {
   const skills = [
     skillVue,
@@ -63,20 +71,48 @@ export default function Body() {
   ];
   const imageLinks = [
     "https://naksagumba.org.np/",
-    "http://http://smartdoors.naksagumba.org.np/",
+    "http://smartdoors.naksagumba.org.np/",
     "https://tenzin1000.github.io/trek-nepal/",
     "https://globaltech.com.np/",
     "https://tenzin1000.github.io/covid-data.github.io/",
     "https://tenzin1000.github.io/Site1/",
   ];
+  const images = [
+    naksaImg,
+    smartdoorsImg,
+    treknepalImg,
+    globaltecImg,
+    covidImg,
+    coffeeImg,
+  ];
+  const companys = [
+    "Naksa Monastery",
+    "Smartdoors Pvt. Ltd.",
+    "Treknepal Pvt. Ltd.",
+    "Globaltech Pvt. Ltd.",
+    "Covid data",
+    "Sample Site",
+  ];
+  const toolsArray = [
+    ["React", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    ["React", "HTML", "CSS", "JavaScript", "Redux", "CSS", "Bootstrap"],
+    ["Vue", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    ["HTML", "CSS", "JavaScript", "Bootstrap", "API"],
+    ["HTML", "CSS", "Bootstrap"],
+  ];
 
-  const handleImageClick = index => {
-    const link = imageLinks[index];
-    window.open(link, "_blank");
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = index => {
+    setHoveredIndex(index);
   };
 
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
   return (
-    <div className="body-container dotted-border col-md-9 col-11 mx-auto ">
+    <div className="body-container dotted-border col-md-10 col-11 mx-auto ">
       <div className="photo-container d-b d-flex align-items-center justify-content-center">
         <div className="my-5">
           <img src={img} alt="sangey lama" className="profileimg" />
@@ -95,37 +131,56 @@ export default function Body() {
         className="d-b text-center"
       />
       <div className="com-con d-b p-3 row mx-0 align-items-center justify-content-center">
-        <div className="col-md-4 col-6 my-2">
+        <div className="col-md-4 col-4 my-2">
           <img src={globaltech} alt="globaltech" className="company-img" />
         </div>
-        <div className="col-md-4 col-6 my-2">
+        <div className="col-md-4 col-4 my-2">
           <img src={smartdoors} alt="globaltech" className="company-img" />
         </div>
-        <div className="col-md-4 col-6  my-2">
+        <div className="col-md-4 col-4  my-2">
           <img src={aiinterf} alt="globaltech" className="company-img" />
         </div>
       </div>
       {/* ======mywork===== */}
       <TextContainer name={names[1]} paragraph={paragraphs[1]} />
-      <div className="work-container d-t d-b p-5 row mx-0 align-items-center justify-content-center">
-        <div
-          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
-          onClick={() => handleImageClick(0)}></div>
-        <div
-          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
-          onClick={() => handleImageClick(1)}></div>
-        <div
-          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
-          onClick={() => handleImageClick(2)}></div>
-        <div
-          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
-          onClick={() => handleImageClick(3)}></div>
-        <div
-          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
-          onClick={() => handleImageClick(4)}></div>
-        <div
-          className="work-img col-6 col-md-4 col-12 my-4 my-md-0"
-          onClick={() => handleImageClick(5)}></div>
+      <div className="work-container  row d-flex flex-wrap p-3 justify-content-center d-t d-b p-3 row mx-0 align-items-center justify-content-center">
+        {images.map((imageUrl, index) => (
+          <div
+            className="work-img col-12 col-sm-6 col-md-4 my-2 my-md-4"
+            key={index}>
+            <div
+              className={`workmain-img ${
+                hoveredIndex === index ? "imgopacity" : ""
+              }`}
+              style={{
+                background: `url(${imageUrl}) center/contain no-repeat`,
+              }}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}>
+              <div
+                className={`visit-btn ${
+                  hoveredIndex === index ? "hovered" : ""
+                }`}>
+                <a
+                  href={imageLinks[index]}
+                  className="btn btn-primary"
+                  target="_blank">
+                  Visit Website
+                </a>
+              </div>
+            </div>
+            <div className="work-detail">
+              <div className="work-name">{companys[index]}</div>
+              <div className="work-tools d-flex flex-wrap">
+                {toolsArray[index].map((tool, toolIndex) => (
+                  <div className="tools" key={toolIndex}>
+                    {tool}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
       {/* ======startup===== */}
       {/* <TextContainer
@@ -151,12 +206,12 @@ export default function Body() {
             creating something amazing together!
           </div>
           <div className="msg-btn  rounded d-flex align-items-center justify-content-center">
-            <button className=" bg-white px-3 text-dark btn d-flex align-items-center justify-content-center">
-              <FontAwesomeIcon icon={faMessage} className="me-1" />
+            <button className="btn btn-primary bg-white px-3 text-dark btn d-flex align-items-center justify-content-center">
+              <FontAwesomeIcon icon={faMessage} className="me-1 text-primary" />
               <h5 className="mb-0">
                 <a
                   href="https://www.facebook.com/Erick.evon07"
-                  className="textme"
+                  className="textme "
                   target="_blank">
                   text me
                 </a>
