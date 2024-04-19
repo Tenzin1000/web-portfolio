@@ -145,38 +145,38 @@ export default function Body() {
       <TextContainer name={names[1]} paragraph={paragraphs[1]} />
       <div className="work-container  row d-flex flex-wrap p-3 justify-content-center d-t d-b p-3 row mx-0 align-items-center justify-content-center">
         {images.map((imageUrl, index) => (
-          <div
-            className="work-img col-12 col-sm-6 col-md-4 my-2 my-md-4"
-            key={index}>
-            <div
-              className={`workmain-img ${
-                hoveredIndex === index ? "imgopacity" : ""
-              }`}
-              style={{
-                background: `url(${imageUrl}) center/contain no-repeat`,
-              }}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}>
+          <div className="p-2 col-12 col-sm-6 col-md-4 my-2 my-md-2">
+            <div className="work-img p-1" key={index}>
               <div
-                className={`visit-btn ${
-                  hoveredIndex === index ? "hovered" : ""
-                }`}>
-                <a
-                  href={imageLinks[index]}
-                  className="btn btn-primary"
-                  target="_blank">
-                  Visit Website
-                </a>
+                className={`workmain-img ${
+                  hoveredIndex === index ? "imgopacity" : ""
+                }`}
+                style={{
+                  background: `url(${imageUrl}) center/contain no-repeat`,
+                }}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}>
+                <div
+                  className={`visit-btn ${
+                    hoveredIndex === index ? "hovered" : ""
+                  }`}>
+                  <a
+                    href={imageLinks[index]}
+                    className="btn btn-primary"
+                    target="_blank">
+                    Visit Website
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="work-detail">
-              <div className="work-name">{companys[index]}</div>
-              <div className="work-tools d-flex flex-wrap">
-                {toolsArray[index].map((tool, toolIndex) => (
-                  <div className="tools" key={toolIndex}>
-                    {tool}
-                  </div>
-                ))}
+              <div className="work-detail">
+                <div className="work-name">{companys[index]}</div>
+                <div className="work-tools d-flex flex-wrap">
+                  {toolsArray[index].map((tool, toolIndex) => (
+                    <div className="tools" key={toolIndex}>
+                      {tool}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
