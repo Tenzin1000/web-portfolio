@@ -120,7 +120,12 @@
 }
 /* ===skill=== */
 .sk-img {
-  height: 100%;
+  height: 70px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+@media screen and (max-width: 450px) {
+  .sk-img {
+    height: 50px;
+  }
 }

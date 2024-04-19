@@ -207,7 +207,7 @@ export default function Body() {
           </div>
           <div className="msg-btn  rounded d-flex align-items-center justify-content-center">
             <button className="btn btn-primary bg-white px-3 text-dark btn d-flex align-items-center justify-content-center">
-              <FontAwesomeIcon icon={faMessage} className="me-1 text-primary" />
+              <FontAwesomeIcon icon={faMessage} className="me-1 " />
               <h5 className="mb-0">
                 <a
                   href="https://www.facebook.com/Erick.evon07"
@@ -339,7 +339,7 @@ export default function Body() {
         paragraph={paragraphs[4]}
         className="d-b d-t text-center"
       />
-      <div className="skill-con col-8 my-3  mx-auto">
+      <div className="skill-con p-1 col-8 my-3  mx-auto">
         <div className="skills-img row mx-auto align-items-center justify-content-center">
           {skills.map(skill => (
             <div className="col-3 m-1 m-md-2">
